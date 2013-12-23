@@ -1,0 +1,207 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require_self
+*= require_tree .
+*= require purecss
+*= require purecss-nr
+*/
+@import "bootstrap";
+body { padding-top: 60px; }
+body
+{
+/*background-color: #91AA9D;*/
+font-family: "proxima-nova",sans-serif;
+}
+#header
+{
+
+background-color: #5B8DA6;
+height: 100px;
+margin-top: -60px;
+padding: 0;
+}
+#footer {
+background-color: #5B8DA6;
+height: 100px;
+margin-bottom: -20px;
+padding: 0;        
+}
+#main-wrap
+{
+overflow: hidden;
+}
+#sidebar
+{
+float: left;
+width: 200px;
+height: 100%;
+}
+#content-wrap
+{
+background-color: azure;
+float: right;
+width: 1100px;
+height: 1100px;
+}
+#main-wrap > div
+{
+min-height: 450px;
+}
+.submit {
+width: auto;
+padding: 9px 15px;
+background: #617798;
+border: 0;
+font-size: 14px;
+color: #FFFFFF;
+}
+#menu {
+    margin-left: -150px;
+    width: 200px;
+    position: fixed;
+    top: 110px;
+    left: 150px;
+}
+#menu, .pure-menu-link {
+    transition: all 0.2s ease-out 0s;
+}
+#menu .pure-menu-open {
+    background: none repeat scroll 0% 0% transparent;
+    border: 0px none;
+}
+
+.pure-u {
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-rendering: auto;
+}
+#menu .pure-menu-selected {
+    background: none repeat scroll 0% 0% #55cee6;
+}
+/* #menu .pure-menu ul, #menu .pure-menu .menu-item-divided {
+border-top: 1px solid #55cee6;
+border-left: 1px solid #55cee6;
+border-right: 1px solid #55cee6;
+border-bottom: 1px solid #55cee6;
+} */
+.pure-menu ul {
+    list-style: none outside none;
+}
+#layout {
+    padding-left: 250px;
+    left: 0px;
+}
+textarea {
+        width: 588px; height: 123px;
+}
+.pure-button.pure-button-primary
+{
+    text-decoration: none;
+}
+.border-form-div
+{
+max-width: 600px;
+padding: 19px 29px 29px;
+margin: 0 auto 20px;
+background-color: #fff;
+background-image: url("/images/bg11.png");
+border: 1px solid #55cee6;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+-webkit-box-shadow: 0 1px 2px #55cee6;
+-moz-box-shadow: 0 1px 2px #55cee6;
+box-shadow: 0 1px 2px #55cee6;
+}
+
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox
+{
+margin-bottom: 10px;
+}
+
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"]
+{
+font-size: 16px;
+height: auto;
+margin-bottom: 15px;
+padding: 7px 9px;
+}
+/* end */
+
+.button {
+font-family: Arial;
+color: #ffffff;
+font-size: 25px;
+padding: 10px;
+text-decoration: none;
+border-radius: 0px;
+background: #55cee6;
+display: block;
+margin-left: 1000px;
+margin-right: auto;
+}
+.button:hover {
+background: #55cee6;
+}
+
+/* Form Styling */
+
+.submit {
+width: auto;
+padding: 9px 15px;
+background: #617798;
+border: 0;
+font-size: 14px;
+color: #FFFFFF;
+}
+
+#error_explanation {
+ /* width: 400px; */
+  /* border: 2px solid #55cee6; */
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+/* background-color: #55cee6; */
+  color: #55cee6;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+.chart {
+margin-left: 25px;
+letter-spacing: normal;
+font-size:20px;
+font-weight: bold;
+height: 500px;
+width: 500px;
+font-family: "proxima-nova",sans-serif;
+font-color: ''
+}

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  b_name: MyString
+  b_site: MyString
+  b_area: MyString
+  b_city: MyString
+  b_state: MyString
+  b_country: MyString
+
+two:
+  b_name: MyString
+  b_site: MyString
+  b_area: MyString
+  b_city: MyString
+  b_state: MyString
+  b_country: MyString

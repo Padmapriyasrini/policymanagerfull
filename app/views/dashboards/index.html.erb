@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title></title>
+    <%= javascript_include_tag "/js/highcharts.js", "chartkick" %>
+    <script type="text/javascript" src ="js/themes/grid.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div><img src="/images/fixnix.png"></div>
+    </div>
+    <div id="main-wrap">
+        <div id="sidebar">
+            <%= render :partial => "layouts/menu" %>
+        </div>
+        <div id="content-wrap" class="dashboard">
+            <div class="chart">
+                <div>
+                    <p>Policy</p>
+                    <%= pie_chart Policy.group("p_name").count %>
+                </div>
+                <div>
+                    <p>Control Standards</p>
+                    <%= pie_chart Policy.group("p_name").count %>
+                </div>
+                <div>
+                    <p>Control Standards</p>
+                    <%= pie_chart Policy.group("p_name").count %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div id="footer">Footer</div> -->
+</body>
+</html>
+
+

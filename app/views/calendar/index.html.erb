@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Calendar</title>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			buttonText: {
+				prev: 'prev',
+				next: 'next'
+			},
+			firstDay: 1, 
+			isRTL :false,
+			hiddenDays : [0,6],
+			weekMode : 'variable',
+			weekNumbers : true,
+			handleWindowResize :false,
+			allDaySlot: true,
+			allDayText: 'today',
+			year: 2015,
+			month: 3
+
+		});
+	});
+	function getView() {
+		var view = $('#calendar').fullCalendar('getView');
+		alert("Month is " + view.title);
+	}
+	</script>
+</head>
+<body>
+	<div id="header">
+        <div><img src="/images/fixnix.png"></div>
+    </div>
+	<div id="main-wrap">
+		<div id="sidebar">
+			<%= render :partial => "layouts/menu" %>
+		</div>
+		<div id="content-wrap">
+			<div id='calendar'></div>
+			<button onclick="getView()">getView</button>
+			<button onclick="$('#calendar').fullCalendar('changeView', 'basicDay')">change to basicDay</button>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

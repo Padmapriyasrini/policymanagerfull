@@ -1,0 +1,50 @@
+<%= form_for(@businessunit) do |f| %>
+<% if @businessunit.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@businessunit.errors.count, "error") %> prohibited this businessunit from being saved:</h2>
+
+  <ul>
+    <% @businessunit.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="span11 offset well">
+  <div class="form-horizontal">
+
+    <div class="control-group">
+      <%= f.label "Business Unit" %>
+      <%= f.text_field :b_name %>
+    </div>
+    <div class="control-group">
+      <%= f.label "Site" %>
+      <%= f.text_field :b_site %>
+    </div>
+    <div class="control-group">
+      <%= f.label "Area" %>
+      <%= f.text_field :b_area %>
+    </div>
+    <div class="control-group">
+      <%= f.label "City" %>
+      <%= f.text_field :b_city %>
+    </div>
+    <div class="control-group">
+      <%= f.label 'State' %>
+      <%= f.text_field :b_state %>
+    </div>
+    <div class="control-group">
+      <%= f.label 'Country' %>
+      <%= f.text_field :b_country %>
+    </div>
+    <div class="control-group">
+      <b> Timezone </b><br/>
+      <%= f.time_zone_select :time_zone , ActiveSupport::TimeZone.all %>
+    </div>
+    <div class="control-group">
+      <%= f.submit 'Create BU', :class => "pure-button pure-button-primary"%>
+      <%= link_to 'Cancel', businessunits_path , :class => "pure-button pure-button-primary" %>
+    </div>
+    <% end %>
+  </div>
+</div>

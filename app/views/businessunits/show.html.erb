@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <div id="header">
+    <div><img src="/images/fixnix.png"></div>
+  </div>
+  <div id="main-wrap">
+    <div id="sidebar">
+      <%= render :partial => "layouts/menu" %>
+    </div>
+    <div id="content-wrap">
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <b>Business Unit</b>
+        <%= @businessunit.b_name %>
+      </p>
+
+      <p>
+        <b>Site</b>
+        <%= @businessunit.b_site %>
+      </p>
+
+      <p>
+        <b>Area</b>
+        <%= @businessunit.b_area %>
+      </p>
+
+      <p>
+        <b>City</b>
+        <%= @businessunit.b_city %>
+      </p>
+
+      <p>
+        <b>State</b>
+        <%= @businessunit.b_state %>
+      </p>
+
+      <p>
+        <b>Country</b>
+        <%= @businessunit.b_country %>
+      </p>
+
+      <%= link_to "Show Report", businessunit_path(@businessunit, :format => "pdf") , :class => "pure-button pure-button-primary"  %>
+      <%= link_to 'Edit', edit_businessunit_path(@businessunit) , :class => "pure-button pure-button-primary" %> 
+      <!--      <%= link_to 'Back', businessunits_path , :class => "pure-button pure-button-primary" %> -->
+
+      <%= link_to 'New Businessunit', new_businessunit_path , :class => "pure-button pure-button-primary"  %>
+
+    </div>
+  </div>
+  <!--   <div id="footer">Footer</div> -->
+
+</body>
+</html>

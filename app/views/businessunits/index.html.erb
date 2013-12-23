@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="header">
+        <div><img src="/images/fixnix.png"></div>
+    </div>
+    <div id="main-wrap">
+        <div id="sidebar">
+            <%= render :partial => "layouts/menu" %>
+        </div>
+        <div id="content-wrap">
+            <div class="sapn10 offset well">
+                <div class="tabbable">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#Policy" data-toggle="tab">Policy</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="Policy" class="tab-pane active">
+
+                            <table class="table table-bordered">
+                              <tr>
+                                <th>Business Unit</th>
+                                <th>Site</th>
+                                <th>Country</th>
+                            </tr>
+
+                            <% @businessunits.each do |businessunit| %>
+                            <tr>
+                                <td><%= businessunit.b_name %></td>
+                                <td><%= businessunit.b_site %></td>
+                                <td><%= businessunit.b_country %></td>
+                                <td><%= link_to 'Show', businessunit %></td>
+                                <td><%= link_to 'Destroy', businessunit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                            </tr>
+                            <% end %>
+                        </table>
+
+                        <br />
+
+                        <%= link_to 'New Businessunit', new_businessunit_path , :class => "pure-button pure-button-primary"  %>
+                    </div>
+                </div><!-- /.tab-content -->
+            </div><!-- /.tabbable -->
+        </div>
+    </div>
+</div>
+<!-- <div id="footer">Footer</div> -->
+</body>
+</html>
+
+
+
+

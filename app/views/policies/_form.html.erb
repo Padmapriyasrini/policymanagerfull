@@ -1,0 +1,116 @@
+<%= form_for(@policy) do |f| %>
+<% if @policy.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@policy.errors.count, "error") %> prohibited this policy from being saved:</h2>
+
+  <ul>
+    <% @policy.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="span11 offset well">
+  <div class="form-horizontal">
+    <div class="accordion " id="accordion2">
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+            New Policy 
+          </a>
+        </div>
+        <div id="collapseOne" class="accordion-body collapse in">
+          <div class="accordion-inner">
+            <div class="control-group">
+              <%= f.label "Policy Name" %>
+              <%= f.text_field :p_name %>
+            </div>
+            <div class="control-group">
+              <%= f.label "Policy Code" %>
+              <%= f.text_field :p_code %>
+            </div>
+            <div class="control-group">
+
+              <%= f.label "Business Units" %>
+              <%= f.collection_select :businessunit_id , @businessunit, :id ,:b_name %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+            Scope and Objective
+          </a>
+        </div>
+        <div id="collapseTwo" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="control-group">
+              <%= f.label "Policy Scope" %>
+              <%= f.text_area :p_scope  , :rows => 5, :cols => 500  %>
+            </div>
+            <div class="control-group">
+              <%= f.label "Policy Objective" %>
+              <%= f.text_area :p_objective , :rows => 5, :cols => 500 %>
+            </div>
+            <div class="control-group">
+              <%= f.label "Policy Description" %>
+              <%= f.text_area :p_description  , :rows => 5, :cols => 500 %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsethree">
+            Document Control
+          </a>
+        </div>
+        <div id="collapsethree" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <div class="control-group">
+              <b> Document Title </b><br/>
+              
+            </div>
+            <div class="control-group">
+              <b> Attachment </b><br/>
+              <%= f.file_field :attach %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsefour">
+            Governance Risk and Compliance
+          </a>
+        </div>
+        <div id="collapsefour" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p>Governance Risk and Compliance</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapsefive">
+            Approval , Review and  Distribution
+          </a>
+        </div>
+        <div id="collapsefive" class="accordion-body collapse">
+          <div class="accordion-inner">
+            <p>Approval , Review and  Distribution</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div>
+    <%= f.submit 'Create Policy', :class =>  "pure-button pure-button-primary"%>
+    <%= link_to 'Cancel', policies_path , :class => "pure-button pure-button-primary"%>
+  </div>
+  <% end %>
+</div>
+
+

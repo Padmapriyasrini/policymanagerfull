@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <div id="header">
+    <div><img src="/images/fixnix.png"></div>
+  </div>
+  <div id="main-wrap">
+    <div id="sidebar">
+      <%= render :partial => "layouts/menu" %>
+    </div>
+    <div id="content-wrap">
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <b>Policy Name</b>
+        <%= @policy.p_name %>
+      </p>
+
+      <p>
+        <b>Policy Code</b>
+        <%= @policy.p_code %>
+      </p>
+
+      <p>
+        <b>Policy Scope</b>
+        <%= @policy.p_scope %>
+      </p>
+
+      <p>
+        <b>Policy Objective</b>
+        <%= @policy.p_objective %>
+      </p>
+
+      <p>
+        <b>Policy Description</b>
+        <%= @policy.p_description %>
+      </p>
+      <p>
+        <a href="<%= @policy.attach.url %> ">
+         <b> File attached </b></a>
+       </p>
+       <%= link_to "Show Report", policy_path(@policy, :format => "pdf") , :class => "pure-button pure-button-primary"  %>
+       <%= link_to 'Edit', edit_policy_path(@policy) , :class => "pure-button pure-button-primary"  %> 
+       <%= link_to 'New Policy', new_policy_path , :class => "pure-button pure-button-primary"  %>
+
+     </div>
+   </div>
+   <!--   <div id="footer">Footer</div> -->
+
+ </body>
+ </html>

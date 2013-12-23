@@ -1,0 +1,82 @@
+<div class="pure-u" id="menu">
+	<div class="pure-menu pure-menu-open">
+		<ul>
+			<li class="fancy">
+				<a href="/dashboards">
+					<i  class="icon-camera-retro"></i>
+					<span>Dashboard</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="/policies">
+					<i class="icon-file-text"></i>
+					<span >Policy</span> 
+				</a>
+			</li>
+
+			<li>
+				<a href="#">
+					<i  class="icon-list-alt"></i>
+					<span >Control Standards</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="/businessunits">
+					<i  class="icon-building"></i>
+					<span >Business Units</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="#">
+					<i class="icon-group"></i>
+					<span >Groups</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="/calendar">
+					<i  class="icon-calendar"></i>
+					<span >Calendar</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="#">
+					<i  class="icon-archive"></i>
+					<span >Archive</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="#">
+					<i  class="icon-envelope"></i>
+					<span >Notification</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="#">
+					<i class="icon-trophy"></i>
+					<span>Test</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="#">
+					<i class= "icon-user"></i>
+					<span>Admin</span>
+				</a>
+			</li>
+
+			<li>
+				<% if user_signed_in? %>
+				<!-- Signed in as <%= current_user.email %>. Not you? -->
+				<%= link_to '<i class= "icon-signout"></i> <span>Sign Out</span>'.html_safe, destroy_user_session_path, :method => :delete %>
+				<% end %>
+			</li>
+		</ul>
+	</div>
+</div>
